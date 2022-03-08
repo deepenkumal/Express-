@@ -1,0 +1,41 @@
+<%-include('../includes/_header')%>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <!-- navbar -->
+            <%-include('../includes/_nav')%>
+
+                <!-- body content -->
+                <h1 class="text-center">Register page </h1>
+                <div class="form-container">
+                    <% if(message){%>
+                        <div class="alert alert-success" role="alert">
+                            <p><%= message%></p>
+                        </div>
+                    <%}%>
+                    <form action="/user/register/" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name <sup class="text-danger">*</sup> </label>
+                            <input type="text" class="form-control" name="name" placeholder="Full Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">email<sup class="text-danger">*</sup></label>
+                            <input type="email" class="form-control" name="email" placeholder="email">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">password<sup class="text-danger">*</sup></label>
+                            <input type="password" class="form-control" name="password" placeholder="password">
+                        </div>
+                        <button class="btn btn-primary" type="submit" >Register</button>
+                    </form>
+                </div>
+
+                <!-- footer -->
+                <%-include('../includes/_footer')%>
+        </div>
+    </body>
+
+    </html>
