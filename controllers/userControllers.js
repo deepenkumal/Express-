@@ -5,8 +5,6 @@ exports.getRegisterUser = (req, res) => {
 };
 exports.postRegisterUser = async(req, res) => {
   const user = new userModel(req.body);
-  console.log("This ");
-  console.log(req.body);
   try{
     const result = await user.save();
     console.log(result);
